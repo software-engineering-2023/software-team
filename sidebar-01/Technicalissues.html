@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Banky</title>
+  	<title>Bank EL Bank</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,9 +18,8 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
-	           
-	          </li>
+              <a href="home.html">Home</a>
+          </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
@@ -28,6 +27,9 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
 	          </li>
+            <li>
+              <a href="home.html">Home</a>
+          </li>
 	          <li>
               <a href="Transactions.html">View Transactions</a>
 	          </li>
@@ -48,8 +50,6 @@
 	          </li>
 	        </ul>
 
-          
-
 	        <div class="footer">
 	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
@@ -60,8 +60,8 @@
     	</nav>
 
         <!-- Page Content  -->
+        
       <div id="content" class="p-4 p-md-5">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
 
@@ -92,18 +92,50 @@
           </div>
         </nav>
         <div id="home">
-          <h2 class="mb-4">Welcome Ingyy</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your account details:</p>
-          <p>Account Number : 58545</p>
-          <p>Account Balance : 10,000,000 $</p>
-          <p>Account Type : Savings Account </p>
-          <p>Account Status : Active</p>
-          <p>Account Creation Date : 9/9/2018 </p>
-          </div>
+          <h2 class="mb-4">Report your problem</h2>
+
+          <style>
+            .form-option {
+              display: block;
+              margin-bottom: 10px;
+            }
+          </style>
           
+          <label for="colors"><u>Determine your problem:</u></label>
+          <div class="form-option">
+          <input type="radio" id="red" name="colors" value="red">
+          <label for="red">Credit card theft</label>
+          </div>
+          <div class="form-option">
+          <input type="radio" id="green" name="colors" value="green">
+          <label for="green">Credit Card Loss</label>
+          </div>
+          <div class="form-option">
+          <input type="radio" id="blue" name="colors" value="blue">
+          <label for="blue">Credit Card Damage</label>
+          </div>
+          <div class="form-option">
+            <input type="radio" id="green" name="colors" value="green">
+            <label for="green">Credit Card Damage</label>
+          </div>
+          <hr>
+          <style>
+            .form-group {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+          
+          <div class="form-group">
+            <label for="mytextbox">For other problems::</label>
+            <textarea id="mytextbox" name="mytextbox" rows="5" cols="50"></textarea>
+          </div>
+          <hr>
+          <button type="submit">Confirm</button>
+        </form>
+        <hr>
 
-        
-
+        <a href="tel:+1234567890" style="color: blue;">For technical issues Call us at (123) 456-7890</a>
 
       </div>
 		</div>
