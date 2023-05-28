@@ -91,18 +91,56 @@
             </nav>
 
             <!-- Page Content  -->
-            <div id="home">
-                <h2 class="mb-4">Welcome Admin</h2>
-                <p style="text-align: left; font-weight: bold; text-decoration: underline;">User Information:</p>
-                <p>Name: Abdelrahman Shouny </p>
-                <p>Phone Number : 01221677798 </p>
-                <p>Address : Maadi </p>
+            <!-- Page Content -->
+            <div id="content" class="p-4 p-md-5">
+                <!-- Content here -->
+                <div class="container">
+                    <h2>Handle Theft Reports</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Report ID</th>
+                                    <th>Client Name</th>
+                                    <th>Report Description</th>
+                                    <th>Handle Report</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John Doe</td>
+                                    <td>Unauthorized transaction on the account.</td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="handleReport(1)">Handle</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane Smith</td>
+                                    <td>Missing funds from the account.</td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="handleReport(2)">Handle</button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows for other reports -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <script src="js/jquery.min.js"></script>
-            <script src="js/popper.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            function handleReport(reportId) {
+                // Perform the necessary logic to handle the report
+                alert("Report " + reportId + " has been handled successfully!");
+            }
+        </script>
 </body>
 
 </html>

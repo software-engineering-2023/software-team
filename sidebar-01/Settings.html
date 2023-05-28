@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Settings</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -91,18 +91,44 @@
             </nav>
 
             <!-- Page Content  -->
-            <div id="home">
-                <h2 class="mb-4">Welcome Admin</h2>
-                <p style="text-align: left; font-weight: bold; text-decoration: underline;">User Information:</p>
-                <p>Name: Abdelrahman Shouny </p>
-                <p>Phone Number : 01221677798 </p>
-                <p>Address : Maadi </p>
-            </div>
+            <div id="content" class="p-4 p-md-5">
+                <!-- Content here -->
+                <div class="container">
+                    <h2>Update Settings</h2>
+                    <form id="settings-form">
+                        <div class="form-group">
+                            <label for="site-title">Site Title:</label>
+                            <input type="text" class="form-control" id="site-title" name="site-title" required>
+                        </div>
 
-            <script src="js/jquery.min.js"></script>
-            <script src="js/popper.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/main.js"></script>
+                        <div class="form-group">
+                            <label for="logo-image">Logo Image:</label>
+                            <input type="file" class="form-control-file" id="logo-image" name="logo-image">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="site-description">Site Description:</label>
+                            <textarea class="form-control" id="site-description" name="site-description"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            document.getElementById("settings-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                // Perform the necessary logic to update the settings
+                alert("Settings updated successfully!");
+            });
+        </script>
 </body>
 
 </html>
