@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Manage Banker(s)</title>
+    <title>Manage Client(s)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,25 +21,20 @@
                 <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
                 <ul class="list-unstyled components mb-5">
                     <li>
-                        <a href="homeAdmin.html">Home</a>
-                    </li>
-                    
+                        <a href="homeBanker.html">Home</a>
+                      </li>
+
+                   
                     <li>
-                        <a href="BankersAdminView.html">Manage Banker(s)</a>
+                        <a href="ClientBankerView.html">Manage Client(s)</a>
                     </li>
 
                     <li>
-                        <a href="ClientsAdminView.html">Manage Client(s)</a>
+                        <a href="ReportBanker.html">Reports</a>
                     </li>
-
                     <li>
-                        <a href="Reports.html">Handle Reports</a>
-                    </li>
-
-                    <li>
-                        <a href="Settings.html">Settings</a>
-                    </li>
-
+                        <a href="bankersettings.html">Settings</a>
+                      </li>
 
                 </ul>
                 <div class="footer">
@@ -88,35 +83,38 @@
                     </div>
                 </div>
             </nav>
-
             <div id="content" class="p-4 p-md-5">
                 <!-- Content here -->
                 <div class="container">
-                    <h2>Bankers Admin View</h2>
+                    <h2>Clients Banker View</h2>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Username</th>
+                                <th>Email</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Banker 1</td>
-                                <td>Banker-1</td>
+                                <td>Client 1</td>
+                                <td>client1@example.com</td>
                                 <td>Active</td>
                                 <td>
-                                    <button onclick="toggleBankerStatus(this)" data-status="active">Block</button>
+                                    <button onclick="toggleClientStatus(this)"
+                                        data-status="active">Block/Unblock</button>
+                                    <button onclick="closeAccount(this)">Close Account</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Banker 2</td>
-                                <td>Banker-2</td>
+                                <td>Client 2</td>
+                                <td>client2@example.com</td>
                                 <td>Blocked</td>
                                 <td>
-                                    <button onclick="toggleBankerStatus(this)" data-status="blocked">Unblock</button>
+                                    <button onclick="toggleClientStatus(this)"
+                                        data-status="blocked">Block/Unblock</button>
+                                    <button onclick="closeAccount(this)">Close Account</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -125,38 +123,42 @@
                         <label for="notificationText">Notification Text:</label>
                         <input type="text" class="form-control" id="notificationText">
                     </div>
-                    <button onclick="notifyAllBankers()" class="btn btn-primary">Notify All Bankers</button>
+                    <button onclick="notifyAllClients()" class="btn btn-primary">Notify All Clients</button>
                 </div>
             </div>
         </div>
 
-        <script>
-            function toggleBankerStatus(button) {
-                var status = button.getAttribute("data-status");
-                if (status === "active") {
-                    button.setAttribute("data-status", "blocked");
-                    button.textContent = "Unblock";
-                    // Perform the necessary logic to block the banker
-                } else if (status === "blocked") {
-                    button.setAttribute("data-status", "active");
-                    button.textContent = "Block";
-                    // Perform the necessary logic to unblock the banker
-                }
-            }
-
-            function notifyAllBankers() {
-                var notificationText = document.getElementById("notificationText").value;
-                // Perform the necessary logic to notify all bankers with the given notification text
-                console.log("Notification Text:", notificationText);
-                alert("Notifying all bankers: " + notificationText);
-            }
-        </script>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            function toggleClientStatus(button) {
+                var status = button.getAttribute("data-status");
+                if (status === "active") {
+                    button.setAttribute("data-status", "blocked");
+                    button.textContent = "Unblock";
+                    // Perform the necessary logic to block the client
+                } else if (status === "blocked") {
+                    button.setAttribute("data-status", "active");
+                    button.textContent = "Block";
+                    // Perform the necessary logic to unblock the client
+                }
+            }
 
+            function closeAccount(button) {
+                var row = button.parentNode.parentNode;
+                row.remove();
+                // Perform the necessary logic to close the client's account
+            }
+
+            function notifyAllClients() {
+                var notificationText = document.getElementById("notificationText").value;
+                // Perform the necessary logic to notify all clients with the given text
+                alert("Notification sent to all clients: " + notificationText);
+            }
+        </script>
 </body>
 
 </html>

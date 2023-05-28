@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Settings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href=".//css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href=".//css/style.css">
 </head>
 
 <body>
@@ -21,26 +21,20 @@
                 <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
                 <ul class="list-unstyled components mb-5">
                     <li>
-                        <a href="homeAdmin.html">Home</a>
-                    </li>
-                    
-                    <li>
-                        <a href="BankersAdminView.html">Manage Banker(s)</a>
-                    </li>
+                        <a href="homeBanker.html">Home</a>
+                      </li>
 
+                   
                     <li>
-                        <a href="ClientsAdminView.html">Manage Client(s)</a>
+                        <a href="ClientBankerView.html">Manage Client(s)</a>
                     </li>
 
                     <li>
-                        <a href="Reports.html">Handle Reports</a>
+                        <a href="ReportBanker.html">Reports</a>
                     </li>
-
                     <li>
-                        <a href="Settings.html">Settings</a>
-                    </li>
-
-
+                        <a href="bankersettings.html">Settings</a>
+                      </li>
 
                 </ul>
 
@@ -93,29 +87,46 @@
             </nav>
 
             <!-- Page Content  -->
+            <!-- Page Content -->
             <div id="content" class="p-4 p-md-5">
                 <!-- Content here -->
                 <div class="container">
-                    <h2>Update Settings</h2>
-                    <form id="settings-form">
-                        <div class="form-group">
-                            <label for="site-title">Site Title:</label>
-                            <input type="text" class="form-control" id="site-title" name="site-title" required>
-                        </div>
+                    <h2>Handle Client Reports</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Report ID</th>
+                                    <th>Client Name</th>
+                                    <th>Report Description</th>
+                                    <th>Handle Report</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John Doe</td>
+                                    <td>Credit Card loss.</td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="handleReport(1)">Handle</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jane Smith</td>
+                                    <td>Credit Card Damage.</td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="handleReport(2)">Handle</button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows for other reports -->
 
-                        <div class="form-group">
-                            <label for="logo-image">Logo Image:</label>
-                            <input type="file" class="form-control-file" id="logo-image" name="logo-image">
-                        </div>
 
-                        <div class="form-group">
-                            <label for="site-description">Site Description:</label>
-                            <textarea class="form-control" id="site-description" name="site-description"
-                                required></textarea>
-                        </div>
+                               
 
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </form>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,11 +136,10 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script>
-            document.getElementById("settings-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                // Perform the necessary logic to update the settings
-                alert("Settings updated successfully!");
-            });
+            function handleReport(reportId) {
+                // Perform the necessary logic to handle the report
+                alert("Report " + reportId + " has been handled successfully!");
+            }
         </script>
 </body>
 
