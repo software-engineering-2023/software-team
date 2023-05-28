@@ -17,7 +17,7 @@ function login(event) {
     password === "password"
   ) {
     // Successful login, redirect to the home page
-    window.location.href = "HomeCient.html";
+    window.location.href = "HomeClient.html";
   } else if (
     (username === "engy Banker" ||
       username === "shouny Banker" ||
