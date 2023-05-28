@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>About Banky</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href=".//css/style.css">
+
 </head>
 
 <body>
@@ -44,15 +45,11 @@
 
                 <div class="footer">
                     <p>
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-                        is made with
-                        by Injy Ismail</a>
-                        
-                    </p>
-                </div>
+                    <div class="container text-center">
+                        <p>&copy; 2023 Banky. All rights reserved.</p>
+                    </div>
 
-            </div>
+                </div>
         </nav>
 
         <!-- Header  -->
@@ -74,16 +71,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="HomeAdmin.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="About.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                                <a class="nav-link" href="ContactUs.html">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Signout</a>
+                                <a class="nav-link" href="Login.html">Sign out</a>
                             </li>
                         </ul>
                     </div>
@@ -91,56 +88,53 @@
             </nav>
 
             <!-- Page Content  -->
-            <!-- Page Content -->
-            <div id="content" class="p-4 p-md-5">
-                <!-- Content here -->
+            <!-- Header -->
+            <header class="bg-light py-5">
                 <div class="container">
-                    <h2>Handle Theft Reports</h2>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Report ID</th>
-                                    <th>Client Name</th>
-                                    <th>Report Description</th>
-                                    <th>Handle Report</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>John Doe</td>
-                                    <td>Unauthorized transaction on the account.</td>
-                                    <td>
-                                        <button class="btn btn-primary" onclick="handleReport(1)">Handle</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jane Smith</td>
-                                    <td>Missing funds from the account.</td>
-                                    <td>
-                                        <button class="btn btn-primary" onclick="handleReport(2)">Handle</button>
-                                    </td>
-                                </tr>
-                                <!-- Add more rows for other reports -->
-                            </tbody>
-                        </table>
-                    </div>
+                    <h1 class="text-center">About Banky</h1>
                 </div>
-            </div>
-        </div>
+            </header>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            function handleReport(reportId) {
-                // Perform the necessary logic to handle the report
-                alert("Report " + reportId + " has been handled successfully!");
-            }
-        </script>
+            <!-- About Section -->
+            <section class="py-5">
+                <div class="container">
+                    <h2>Welcome to Banky</h2>
+                    <p>
+                        Banky is a leading financial institution committed to providing exceptional banking services to
+                        our
+                        customers. With our extensive range of banking products and personalized customer service, we
+                        strive to
+                        meet the diverse financial needs of individuals and businesses.
+                    </p>
+                    <p>
+                        At Banky, we believe in building long-lasting relationships with our customers based on trust,
+                        transparency, and integrity. Our team of dedicated professionals works tirelessly to deliver
+                        innovative
+                        solutions and ensure a seamless banking experience.
+                    </p>
+                    <p>
+                        Whether you're looking for convenient online banking, competitive interest rates, or expert
+                        financial
+                        advice, Banky is here to serve you. We offer a comprehensive suite of services, including
+                        personal
+                        banking, business banking, loans, investments, and more.
+                    </p>
+                    <p>
+                        We are proud to be a part of your financial journey, and we are committed to helping you achieve
+                        your
+                        financial goals every step of the way. Join us at Banky and experience banking excellence.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    </div>
+
+    <script src=".//js/jquery.min.js"></script>
+    <script src=".//js/popper.js"></script>
+    <script src=".//js/bootstrap.min.js"></script>
+    <script src=".//js/main.js"></script>
 </body>
 
 </html>
