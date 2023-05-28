@@ -11,7 +11,7 @@ function login(event) {
   } else if (
     (username === "engy Client" ||
       username === "shouny Client" ||
-      username === "khalid Client" ||
+      username === "khaled Client" ||
       username === "sara Client" ||
       username === "lama Client") &&
     password === "password"
@@ -21,7 +21,7 @@ function login(event) {
   } else if (
     (username === "engy Banker" ||
       username === "shouny Banker" ||
-      username === "khalid Banker" ||
+      username === "khaled Banker" ||
       username === "sara Banker" ||
       username === "lama Banker") &&
     password === "password"
