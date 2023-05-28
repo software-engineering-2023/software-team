@@ -9,22 +9,14 @@ function login(event) {
     // Successful login, redirect to the home page
     window.location.href = "HomeAdmin.html";
   } else if (
-    (username === "ingy" ||
-      username === "shouny" ||
-      username === "khaled" ||
-      username === "sara" ||
-      username === "lama") &&
-    password === "Client"
+    (username === "ingy" || username === "shouny") &&
+    password === "password"
   ) {
     // Successful login, redirect to the home page
     window.location.href = "HomeClient.html";
   } else if (
-    (username === "ingy" ||
-      username === "shouny" ||
-      username === "khaled" ||
-      username === "sara" ||
-      username === "lama") &&
-    password === "Banker"
+    (username === "khaled" || username === "sara" || username === "lama") &&
+    password === "password"
   ) {
     // Successful login, redirect to the home page
     window.location.href = "HomeBanker.html";
