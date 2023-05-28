@@ -9,7 +9,7 @@ function login(event) {
     // Successful login, redirect to the home page
     window.location.href = "HomeAdmin.html";
   } else if (
-    (username === "engy" ||
+    (username === "ingy" ||
       username === "shouny" ||
       username === "khaled" ||
       username === "sara" ||
@@ -19,7 +19,7 @@ function login(event) {
     // Successful login, redirect to the home page
     window.location.href = "HomeClient.html";
   } else if (
-    (username === "engy" ||
+    (username === "ingy" ||
       username === "shouny" ||
       username === "khaled" ||
       username === "sara" ||
