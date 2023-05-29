@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href=".//css/style.css">
@@ -17,13 +18,13 @@
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
-            <li>
-              <a href="home.html">Home</a>
-          </li>
+	         
+              <li>
+                <a href="home.html">Home</a>
+            </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
-           
 	          <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
@@ -43,9 +44,9 @@
             <li>
               <a href="Technicalissues.html">Report A Problem</a>
 	          </li>
-            <li>
-              <a href="Reminders.html">Reminders</a>
-	          </li>
+              <li>
+                <a href="Reminders.html">Reminders</a>
+                </li>
 	        </ul>
 
 	        <div class="footer">
@@ -90,58 +91,104 @@
           </div>
         </nav>
         <div id="home">
-          <h2 class="mb-4">Manage Credit Cards</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your credit card details:</p>
-          <div class="credit-card-details">
-            <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 1234 5678 9012 3456</li>
-              <li><strong>Card Type:</strong> Visa</li>
-              <li><strong>Expiration Date:</strong> 12/24</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 1% cash back on all purchases</li>
-            </ul>
-          </div>
-          <div class="credit-card-details">
-            <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 7854 7485 9012 1598</li>
-              <li><strong>Card Type:</strong> MasterCard</li>
-              <li><strong>Expiration Date:</strong> 8/28</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 12% cash back on all purchases</li>
-            </ul>
-          </div>
-          <div class="credit-card-management">
-            <br><br>
-            <h3>Credit Card Management</h3>
-            <button id="apply-button" onclick="toggleForm()"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Apply for Credit Card</button>
-            <br><br>
-            <form id="credit-card-form" style="display: none;" onsubmit="submitForm(event)">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-              <br><br>
              
-              <label for="natid">National ID:</label>
-              <input type="text" id="natid" name="natid">
-              <br><br>
-              <label for="accno">Account Number (if any):</label>
-              <input type="text" id="accno" name="accno">
-              <br><br>
-              <label for="card-type">Card Type:</label>
-              <div>
-                <input type="radio" id="visa" name="card-type" value="Visa">
-                <label for="visa">Visa</label>
-              </div>
-              <div>
-                <input type="radio" id="mastercard" name="card-type" value="Mastercard">
-                <label for="mastercard">Mastercard</label>
-              </div>
-              <br><br>
-              <button type="submit"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Submit Application</button>
-            </form>
-          </div>
-          </div>
+               
+            <button onclick="showTable()">View Reminders</button>
+<hr>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+            <table id="myTable" style="display:none;">
+              <tr>
+                <th>Title Of Reminder</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+              </tr>
+              <tr>
+                <td>Credit Card Bill</td>
+                <td>10,000</td>
+                <td>August 1, 2023 10:30 AM</td>
+              </tr>
+              <tr>
+                <td>Electricity Bill</td>
+                <td>3,000</td>
+                <td>june 22, 2023 12;00 AM</td>
+              </tr>
+              <tr>
+                <td>Loan Bill</td>
+                <td>30,000</td>
+                <td>October 1, 2023 12;00 AM</td>
+              </tr>
+            </table>
+            
+            <script>
+            function showTable() {
+              var table = document.getElementById("myTable");
+              if (table.style.display === "none") {
+                table.style.display = "table";
+              } else {
+                table.style.display = "none";
+              }
+            }
+            </script>
+
+            
+<button onclick="showForm()">Set A Reminder</button>
+<i class="fa-solid fa-bell" style="font-size: 22px;"></i>
+<hr>
+
+
+<form id="myForm" style="display:none;" onsubmit="submitForm(event)">
+    <label for="textbox1">Title Of Reminder:</label>
+    <input type="text" id="textbox1"><br><br>
+    <label for="textbox2">Amount:</label>
+    <input type="text" id="textbox2"><br><br>
+    <label for="textbox3">Due Date:</label>
+    <input type="date" id="textbox3"><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="message" style="display:none;">Reminder Submitted!</div>
+
+<script>
+function showForm() {
+    var form = document.getElementById("myForm");
+    if (form.style.display === "none") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+function submitForm(event) {
+    event.preventDefault(); // prevent form submission
+    var message = document.getElementById("message");
+    message.style.display = "block";
+    console.log("Form submitted!");
+}
+</script>
+
+
+
+
       </div>
 		</div>
 

@@ -17,17 +17,17 @@
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
-            <li>
+	          <li>
               <a href="home.html">Home</a>
           </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
-           
 	          <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
 	          </li>
+            
 	          <li>
               <a href="Transactions.html">View Transactions</a>
 	          </li>
@@ -58,8 +58,8 @@
     	</nav>
 
         <!-- Page Content  -->
+        
       <div id="content" class="p-4 p-md-5">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
 
@@ -90,58 +90,51 @@
           </div>
         </nav>
         <div id="home">
-          <h2 class="mb-4">Manage Credit Cards</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your credit card details:</p>
-          <div class="credit-card-details">
-            <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 1234 5678 9012 3456</li>
-              <li><strong>Card Type:</strong> Visa</li>
-              <li><strong>Expiration Date:</strong> 12/24</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 1% cash back on all purchases</li>
-            </ul>
+          <h2 class="mb-4">Report your problem</h2>
+
+          <style>
+            .form-option {
+              display: block;
+              margin-bottom: 10px;
+            }
+          </style>
+          
+          <label for="colors"><u>Determine your problem:</u></label>
+          <div class="form-option">
+          <input type="radio" id="red" name="colors" value="red">
+          <label for="red">Credit card theft</label>
           </div>
-          <div class="credit-card-details">
-            <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 7854 7485 9012 1598</li>
-              <li><strong>Card Type:</strong> MasterCard</li>
-              <li><strong>Expiration Date:</strong> 8/28</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 12% cash back on all purchases</li>
-            </ul>
+          <div class="form-option">
+          <input type="radio" id="green" name="colors" value="green">
+          <label for="green">Credit Card Loss</label>
           </div>
-          <div class="credit-card-management">
-            <br><br>
-            <h3>Credit Card Management</h3>
-            <button id="apply-button" onclick="toggleForm()"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Apply for Credit Card</button>
-            <br><br>
-            <form id="credit-card-form" style="display: none;" onsubmit="submitForm(event)">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-              <br><br>
-             
-              <label for="natid">National ID:</label>
-              <input type="text" id="natid" name="natid">
-              <br><br>
-              <label for="accno">Account Number (if any):</label>
-              <input type="text" id="accno" name="accno">
-              <br><br>
-              <label for="card-type">Card Type:</label>
-              <div>
-                <input type="radio" id="visa" name="card-type" value="Visa">
-                <label for="visa">Visa</label>
-              </div>
-              <div>
-                <input type="radio" id="mastercard" name="card-type" value="Mastercard">
-                <label for="mastercard">Mastercard</label>
-              </div>
-              <br><br>
-              <button type="submit"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Submit Application</button>
-            </form>
+          <div class="form-option">
+          <input type="radio" id="blue" name="colors" value="blue">
+          <label for="blue">Credit Card Damage</label>
           </div>
+          <div class="form-option">
+            <input type="radio" id="green" name="colors" value="green">
+            <label for="green">Credit Card Damage</label>
           </div>
+          <hr>
+          <style>
+            .form-group {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+          
+          <div class="form-group">
+            <label for="mytextbox">For other problems::</label>
+            <textarea id="mytextbox" name="mytextbox" rows="5" cols="50"></textarea>
+          </div>
+          <hr>
+          <button type="submit">Confirm</button>
+        </form>
+        <hr>
+
+        <a href="tel:+1234567890" style="color: blue;">For technical issues Call us at (123) 456-7890</a>
+
       </div>
 		</div>
 
