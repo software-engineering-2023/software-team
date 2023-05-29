@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Loans</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href=".//css/style.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+	        <ul class="list-unstyled components mb-5">
+                <li>
+                    <a href="homeClient.html">Home</a>
+                </li>
+                    <li>
+                        <a href="CreditCard.html">Credit Cards</a>
+                    </li>
+                 
+                    <li>
+                    <a href="ManageLoans.html" >Loans</a>
+                    
+                    </li>
+                    <li>
+                    <a href="Transactions.html">View Transactions</a>
+                    </li>
+              <li>
+	          <li>
+              <a href="#">View Bills</a>
+	          </li>
+            <li>
+              <a href="#">Bank Transfer</a>
+	          </li>
+            <li>
+              <a href="Cashback.html">Cash Back Points</a>
+	          </li>
+            <li>
+              <a href="Technicalissues.html">Report A Problem</a>
+	          </li>
+            <li>
+              <a href="Reminders.html">Reminders</a>
+	          </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p>
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
+						  </p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homeBanker.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutBanker.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html">Signout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div id="home">
+          <h2 class="mb-4">Manage Loans</h2>
+          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your loans details:</p>
+          <div class="loan-details">
+            <ul>
+              <li><strong>Loan Purpose:</strong> personal</li>
+              <li><strong>Loan Ammount:</strong> 2,000,000 EGP</li>
+              <li><strong>Interest Rate:</strong> 5% Yearly</li>
+              <li><strong>Loan Term:</strong> 36 Months</li>
+              <li><strong>Monthly installment:</strong> 64,312.5 EGP</li>
+              <li><strong>Total Repayment Amount:</strong> 2,315,250 EGP</li>
+              <li><strong>Collateral:</strong> House</li>
+            </ul>
+          </div>
+          <div class="loan-details">
+            <ul>
+                <li><strong>Loan Purpose:</strong> business</li>
+                <li><strong>Loan Ammount:</strong> 35,000,000 EGP</li>
+                <li><strong>Interest Rate:</strong> 3% Yearly</li>
+                <li><strong>Loan Term:</strong> 72 Months</li>
+                <li><strong>Monthly installment:</strong> 580,442.089 EGP</li>
+                <li><strong>Total Repayment Amount:</strong> 41,791,830.4 EGP</li>
+                <li><strong>Collateral:</strong> Personal Car</li>
+            </ul>
+          </div>
+          <h4 class="mb-4">Pending Loans</h4>
+          <div class="loan-details">
+            <ul>
+              <li><strong>Loan Purpose:</strong> personal</li>
+              <li><strong>Loan Ammount:</strong> 10,000,000 EGP</li>
+              <li><strong>Loan Term:</strong> 60 Months</li>
+              <li><strong>Collateral:</strong> Personal Boat</li>
+            </ul>
+          </div>
+          <div class="loan-management">
+            <br><br>
+            <h3>Loans Application</h3>
+            <button id="apply-button" onclick="toggleForm()">Apply for A Loan</button>
+            <br><br>
+            <form id="credit-card-form" style="display: none;" onsubmit="submitForm(event)">
+              <label for="name">Loan Purpose:</label>
+              <input type="text" id="name" name="name">
+              <br><br>
+             
+              <label for="natid">Loan Ammount:</label>
+              <input type="text" id="natid" name="natid">
+              <br><br>
+              <label for="accno">Loan Term:</label>
+              <input type="text" id="accno" name="accno">
+              <br><br>
+              <label for="accno">Collateral:</label>
+              <input type="text" id="accno" name="accno">
+              <br><br>
+              <button type="submit" >Submit Application</button>
+            </form>
+          </div>
+          </div>
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

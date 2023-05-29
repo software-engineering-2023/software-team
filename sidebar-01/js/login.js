@@ -13,7 +13,7 @@ function login(event) {
     password === "password"
   ) {
     // Successful login, redirect to the home page
-    window.location.href = "HomeClient.html";
+    window.location.href = "homeClient.html";
   } else if (
     (username === "khaled" || username === "sara" || username === "lama") &&
     password === "password"
