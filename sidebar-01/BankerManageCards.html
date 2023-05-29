@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home</title>
+  <title>Manage Cards</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -82,62 +82,71 @@
                     </div>
                 </div>
             </nav>
+            <head>
+                <meta charset="utf-8">
+                <title>Loan Management</title>
+                <style>
+                    table {
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+                    
+                    th, td {
+                      border: 1px solid black;
+                      padding: 8px;
+                      text-align: left;
+                    }
+                    
+                    th {
+                      background-color: #f2f2f2;
+                    }
+                  </style>
+              </head>
+              <body>
+                <h1>Client Name: Khaled Magdy</h1>
+                
+                <table>
+                  <tr>
+                    <th>Entry</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Cardholder Name: Khaled Magdy</p>
+                      <p>Card Type: MasterCard</p>
+                      <p>Credit Limit: 500,000 EGP</p>
+                    </td>
+                    <td>
+                        <button onclick="accepttLoan(this)" style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Accept</button>
+                        <button onclick="rejectLoan(this)" style="background-color: orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Reject</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Cardholder Name: Khaled Magdy</p>
+                      <p>Card Type: Visa</p>
+                      <p>Credit Limit: 1,000,000 EGP</p>
 
-            <!-- Page Content  -->
-            <!-- Page Content -->
-            <div id="content" class="p-4 p-md-5">
-                <!-- Content here -->
-                <div class="container">
-                    <h2>Handle Client Reports</h2>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Report ID</th>
-                                    <th>Client Name</th>
-                                    <th>Report Description</th>
-                                    <th>Handle Report</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>John Doe</td>
-                                    <td>Credit Card loss.</td>
-                                    <td>
-                                        <button class="btn btn-primary" onclick="handleReport(1)">Handle</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jane Smith</td>
-                                    <td>Credit Card Damage.</td>
-                                    <td>
-                                        <button class="btn btn-primary" onclick="handleReport(2)">Handle</button>
-                                    </td>
-                                </tr>
-                                <!-- Add more rows for other reports -->
-
-
-                               
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            function handleReport(reportId) {
-                // Perform the necessary logic to handle the report
-                alert("Report " + reportId + " has been handled successfully!");
-            }
-        </script>
-</body>
-
-</html>
+                    </td>
+                    <td>
+                        <button onclick="accepttLoan(this)" style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Accept</button>
+                        <button onclick="rejectLoan(this)" style="background-color: orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Reject</button>
+                    </td>
+                  </tr>
+                </table>
+                
+                <script>
+                  function acceptLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Card accepted");
+                  }
+                  
+                  function rejectLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Card rejected");
+                  }
+                </script>
+              </body>
+            </html>
