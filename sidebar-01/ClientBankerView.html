@@ -68,16 +68,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="homeBanker.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="AboutBanker.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Signout</a>
+                                <a class="nav-link" href="Login.html">Signout</a>
                             </li>
                         </ul>
                     </div>
@@ -103,8 +100,10 @@
                                 <td>Active</td>
                                 <td>
                                     <button onclick="toggleClientStatus(this)"
-                                        data-status="active">Block/Unblock</button>
-                                    <button onclick="closeAccount(this)">Close Account</button>
+                                        data-status="active"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Block/Unblock</button>
+                                    <button onclick="closeAccount(this)"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Close Account</button>
+                                    <button onclick="redirectToPage()"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Loan Requests</button>
+                                    <button onclick="redirectToPage1()"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Card Requests</button>
                                 </td>
                             </tr>
                             <tr>
@@ -113,8 +112,10 @@
                                 <td>Blocked</td>
                                 <td>
                                     <button onclick="toggleClientStatus(this)"
-                                        data-status="blocked">Block/Unblock</button>
-                                    <button onclick="closeAccount(this)">Close Account</button>
+                                        data-status="active"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Block/Unblock</button>
+                                    <button onclick="closeAccount(this)"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Close Account</button>
+                                    <button onclick="redirectToPage()"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Loan Requests</button>
+                                    <button onclick="redirectToPage1()"style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Card Requests</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -158,6 +159,12 @@
                 // Perform the necessary logic to notify all clients with the given text
                 alert("Notification sent to all clients: " + notificationText);
             }
+            function redirectToPage() {
+                window.location.href = "BankerManageLoans.html";
+            }
+            function redirectToPage1() {
+                window.location.href = "BankerManageCards.html";
+            }   
         </script>
 </body>
 
