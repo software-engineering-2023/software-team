@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Banky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href=".//css/style.css">
+        <style>
+ h3 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      font-style: italic;
+    }
+     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+	        <ul class="list-unstyled components mb-5">
+	          <li>
+	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
+	           
+	          </li>
+          
+	          <li>
+	              <a href="CreditCard.html">Manage Credit Cards</a>
+	          </li>
+	          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
+              
+	          </li>
+	          <li>
+              <a href="Transactions.html">View Transactions</a>
+	          </li>
+	          <li>
+              <a href="BILLS.html">View Bills</a>
+	          </li>
+            <li>
+              <a href="Transfer.html">Bank Transfer</a>
+	          </li>
+            <li>
+              <a href="Pay.html">Pay Bills</a>
+	          </li>
+            <li>
+              <a href="#">Cash Back Points</a>
+	          </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Signout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <h3 style="font-family: Arial, sans-serif; color: black;font-style: italic;">Pay Utility Bills</h3>
+        <div style="margin-top: 20px;"></div>
+        <button style="margin-right: 10px;" onclick="showMessage()"><i class="fa-sharp fa-solid fa-bolt fa-lg"></i> Electricity Bill</button>
+        <script>
+         function showMessage() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Electricity Bill Payment Made!");
+  }
+}
+</script>
+<button style="margin-right: 10px;" onclick="showMessage1()"><i class="fa-solid fa-faucet fa-lg"></i> Water Bill</button>
+
+<script>
+  function showMessage1() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Gas Bill Payment Made!");
+  }
+}
+</script>
+<button style="margin-right: 10px;" onclick="showMessage2()"><i class="fa-solid fa-gas-pump fa-lg"></i> Gas Bill</button>
+<script>
+   function showMessage2() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Gas Bill Payment Made!");
+  }
+}
+  </script>
+<button style="margin-right: 10px;" onclick="showMessage3()"><i class="fa-solid fa-phone fa-lg"></i> Telephone Bill</button>
+<script>
+   function showMessage3() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Telephone Bill Payment Made!");
+  }
+}
+</script>
+<button style="margin-right: 10px;" onclick="showMessage4()"><i class="fa-solid fa-wifi fa-lg"></i> Internet Bill</button>
+<script>
+    function showMessage4() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Internet Bill Payment Made!");
+  }
+}
+</script>
+<button style="margin-right: 10px;" onclick="showMessage5()"><i class="fa-solid fa-temperature-arrow-up fa-lg"></i> Heating Bill</button>
+<script>
+    function showMessage5() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Heating Bill Payment Made!");
+  }
+}
+</script>
+<div>
+  <div style="margin-top: 20px;"></div>
+  <p>Choose payment Method:</p>
+  <input type="radio" id="visa" name="card-type" value="Visa">
+  <label for="visa">CREDIT CARD</label>
+</div>
+<div>
+  <input type="radio" id="mastercard" name="card-type" value="Mastercard">
+  <label for="mastercard">BANK ACCOUNT</label>
+</div>
+<br><br>
+
+  <h4>Credit card bill</h4>
+  <button onclick="toggleOptions()"><i class="fa-regular fa-credit-card fa-lg"></i> Credit Card Bill </button>
+<div id="options" style="display: none;">
+  <input type="radio" id="fully" name="card-type" value="Fully">
+  <label for="fully">Fully</label>
+  <br>
+  <input type="radio" id="partially" name="card-type" value="Partially">
+  <label for="partially">Partially</label>
+</div>
+<script>
+var isFirstClick = true;
+function toggleOptions() {
+  var optionsDiv = document.getElementById("options");
+  var paymentOption = document.querySelector('input[name="card-type"]:checked');
+  if (isFirstClick) {
+    optionsDiv.style.display = "block";
+    isFirstClick = false;
+  } else {
+    if (paymentOption === null) {
+      alert("Please choose an option.");
+    } else {
+      alert("Credit Card Bill Payment Made!");
+    }
+  }
+}
+</script>
+            <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
