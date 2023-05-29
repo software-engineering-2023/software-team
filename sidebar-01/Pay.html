@@ -10,11 +10,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href=".//css/style.css">
         <style>
- h3 {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      color: black;
-      font-style: italic;
-    }
+          
+ 
      </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -26,15 +23,14 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
-	           
-	          </li>
-          
+              <a href="homeClient.html">Home</a>
+          </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
+           
 	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
+              <a href="ManageLoans.html">Manage Loans</a>
               
 	          </li>
 	          <li>
@@ -47,10 +43,13 @@
               <a href="Transfer.html">Bank Transfer</a>
 	          </li>
             <li>
-              <a href="Pay.html">Pay Bills</a>
+              <a href="Cashback.html">Cash Back Points</a>
 	          </li>
             <li>
-              <a href="#">Cash Back Points</a>
+              <a href="Technicalissues.html">Report A Problem</a>
+	          </li>
+            <li>
+              <a href="Reminders.html">Reminders</a>
 	          </li>
 	        </ul>
 
@@ -80,27 +79,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Signout</a>
-                </li>
+                  <a class="homeClient.html" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="About.html" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="ContactUs.html" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="Login.html" href="#">Signout</a>
+              </li>
               </ul>
             </div>
           </div>
         </nav>
         
-        <h3 style="font-family: Arial, sans-serif; color: black;font-style: italic;">Pay Utility Bills</h3>
+        <h3 >Pay Utility Bills</h3>
         <div style="margin-top: 20px;"></div>
-        <button style="margin-right: 10px;" onclick="showMessage()"><i class="fa-sharp fa-solid fa-bolt fa-lg"></i> Electricity Bill</button>
-        <script>
-         function showMessage() {
+        <button style="margin-right: 10px; background-color: orange; color: white;font-weight: bold;" onclick="showMessage()"><i class="fa-sharp fa-solid fa-bolt fa-lg"></i> Electricity Bill</button>
+<script>
+function showMessage() {
   var paymentMethod = document.querySelector('input[name="card-type"]:checked');
   if (paymentMethod === null) {
     alert("Please choose a payment method.");
@@ -108,11 +107,21 @@
     alert("Electricity Bill Payment Made!");
   }
 }
-</script>
-<button style="margin-right: 10px;" onclick="showMessage1()"><i class="fa-solid fa-faucet fa-lg"></i> Water Bill</button>
-
+</script>    
+<button style="margin-right: 10px; background-color: orange; color: white;font-weight: bold;" onclick="showMessage1()"><i class="fa-solid fa-faucet fa-lg"></i> Water Bill</button>
 <script>
-  function showMessage1() {
+function showMessage1() {
+  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
+  if (paymentMethod === null) {
+    alert("Please choose a payment method.");
+  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
+    alert("Water Bill Payment Made!");
+  }
+}
+</script>
+<button style="margin-right: 10px; background-color: orange; color: white;font-weight: bold;" onclick="showMessage2()"><i class="fa-solid fa-gas-pump fa-lg"></i> Gas Bill</button>
+<script>
+function showMessage2() {
   var paymentMethod = document.querySelector('input[name="card-type"]:checked');
   if (paymentMethod === null) {
     alert("Please choose a payment method.");
@@ -121,20 +130,9 @@
   }
 }
 </script>
-<button style="margin-right: 10px;" onclick="showMessage2()"><i class="fa-solid fa-gas-pump fa-lg"></i> Gas Bill</button>
+<button style="margin-right: 10px; background-color: orange; color: white;font-weight: bold;" onclick="showMessage3()"><i class="fa-solid fa-phone fa-lg"></i> Telephone Bill</button>
 <script>
-   function showMessage2() {
-  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
-  if (paymentMethod === null) {
-    alert("Please choose a payment method.");
-  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
-    alert("Gas Bill Payment Made!");
-  }
-}
-  </script>
-<button style="margin-right: 10px;" onclick="showMessage3()"><i class="fa-solid fa-phone fa-lg"></i> Telephone Bill</button>
-<script>
-   function showMessage3() {
+function showMessage3() {
   var paymentMethod = document.querySelector('input[name="card-type"]:checked');
   if (paymentMethod === null) {
     alert("Please choose a payment method.");
@@ -143,28 +141,54 @@
   }
 }
 </script>
-<button style="margin-right: 10px;" onclick="showMessage4()"><i class="fa-solid fa-wifi fa-lg"></i> Internet Bill</button>
+<button style="margin-right: 10px; background-color: orange; color: white;font-weight: bold;" onclick="showMessage4()"><i class="fa-solid fa-wifi fa-lg"></i> Internet Bill</button>
+
+<div id="method-buttons"></div>
+
 <script>
-    function showMessage4() {
+function showMessage4() {
+  var buttonContainer = document.getElementById('method-buttons');
   var paymentMethod = document.querySelector('input[name="card-type"]:checked');
   if (paymentMethod === null) {
     alert("Please choose a payment method.");
-  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
-    alert("Internet Bill Payment Made!");
+  } else {
+    // create a new div element to contain the payment method buttons
+    var methodContainer = document.createElement('div');
+
+    // create the payment method buttons
+
+    var mastercardButton = document.createElement('button');
+    mastercardButton.innerHTML = "<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/We_logo.svg/32px-We_logo.svg.png />";
+    mastercardButton.onclick = selectMethod;
+
+    var paypalButton = document.createElement('button');
+    paypalButton.innerHTML = "<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/32px-Orange_logo.svg.png />";
+    paypalButton.onclick = selectMethod;
+
+   function selectMethod() {
+      // display a success message
+      alert("Internet Bill Payment Made!");
+
+      // remove the payment method buttons
+      buttonContainer.removeChild(methodContainer);
+    };
+
+    // add the payment method buttons to the page
+    methodContainer.appendChild(mastercardButton);
+    methodContainer.appendChild(paypalButton);
+    buttonContainer.appendChild(methodContainer);
   }
 }
-</script>
-<button style="margin-right: 10px;" onclick="showMessage5()"><i class="fa-solid fa-temperature-arrow-up fa-lg"></i> Heating Bill</button>
-<script>
-    function showMessage5() {
-  var paymentMethod = document.querySelector('input[name="card-type"]:checked');
-  if (paymentMethod === null) {
-    alert("Please choose a payment method.");
-  } else if (paymentMethod.value === "Visa" || paymentMethod.value === "Mastercard") {
-    alert("Heating Bill Payment Made!");
-  }
+
+function selectMethod() {
+  // display a success message
+  alert("Payment Success!");
+
+  // remove the payment method buttons
+  buttonContainer.removeChild(methodContainer);
 }
 </script>
+
 <div>
   <div style="margin-top: 20px;"></div>
   <p>Choose payment Method:</p>
@@ -178,8 +202,8 @@
 <br><br>
 
   <h4>Credit card bill</h4>
-  <button onclick="toggleOptions()"><i class="fa-regular fa-credit-card fa-lg"></i> Credit Card Bill </button>
-<div id="options" style="display: none;">
+  
+  <button onclick="toggleOptions()" style="background-color: orange; color: white; font-weight: bold;"><i class="fa-regular fa-credit-card fa-lg"></i> Credit Card Bill</button><div id="options" style="display: none;">
   <input type="radio" id="fully" name="card-type" value="Fully">
   <label for="fully">Fully</label>
   <br>

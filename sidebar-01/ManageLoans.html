@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Bank EL Bank</title>
+  	<title>Loans</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,20 +17,21 @@
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
-            <li>
-              <a href="homeClient.html">Home</a>
-          </li>
-	          <li>
-	              <a href="CreditCard.html">Manage Credit Cards</a>
-	          </li>
-           
-	          <li>
-              <a href="ManageLoans.html">Manage Loans</a>
-              
-	          </li>
-	          <li>
-              <a href="Transactions.html">View Transactions</a>
-	          </li>
+                <li>
+                    <a href="homeClient.html">Home</a>
+                </li>
+                    <li>
+                        <a href="CreditCard.html">Credit Cards</a>
+                    </li>
+                 
+                    <li>
+                    <a href="ManageLoans.html" >Loans</a>
+                    
+                    </li>
+                    <li>
+                    <a href="Transactions.html">View Transactions</a>
+                    </li>
+              <li>
 	          <li>
               <a href="BILLS.html">View Bills</a>
 	          </li>
@@ -49,9 +50,9 @@
 	        </ul>
 
 	        <div class="footer">
-	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	        	<p>
 						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
-						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						  </p>
 	        </div>
 
 	      </div>
@@ -90,55 +91,59 @@
           </div>
         </nav>
         <div id="home">
-          <h2 class="mb-4">Manage Credit Cards</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your credit card details:</p>
-          <div class="credit-card-details">
+          <h2 class="mb-4">Manage Loans</h2>
+          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your loans details:</p>
+          <div class="loan-details">
             <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 1234 5678 9012 3456</li>
-              <li><strong>Card Type:</strong> Visa</li>
-              <li><strong>Expiration Date:</strong> 12/24</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 1% cash back on all purchases</li>
+              <li><strong>Loan Purpose:</strong> personal</li>
+              <li><strong>Loan Ammount:</strong> 2,000,000 EGP</li>
+              <li><strong>Interest Rate:</strong> 5% Yearly</li>
+              <li><strong>Loan Term:</strong> 36 Months</li>
+              <li><strong>Monthly installment:</strong> 64,312.5 EGP</li>
+              <li><strong>Total Repayment Amount:</strong> 2,315,250 EGP</li>
+              <li><strong>Collateral:</strong> House</li>
             </ul>
           </div>
-          <div class="credit-card-details">
+          <div class="loan-details">
             <ul>
-              <li><strong>Cardholder Name:</strong> Ingy Ismail</li>
-              <li><strong>Card Number:</strong> 7854 7485 9012 1598</li>
-              <li><strong>Card Type:</strong> MasterCard</li>
-              <li><strong>Expiration Date:</strong> 8/28</li>
-              <li><strong>Credit Limit:</strong> $1,000,000</li>
-              <li><strong>Rewards:</strong> Earn 12% cash back on all purchases</li>
+                <li><strong>Loan Purpose:</strong> business</li>
+                <li><strong>Loan Ammount:</strong> 35,000,000 EGP</li>
+                <li><strong>Interest Rate:</strong> 3% Yearly</li>
+                <li><strong>Loan Term:</strong> 72 Months</li>
+                <li><strong>Monthly installment:</strong> 580,442.089 EGP</li>
+                <li><strong>Total Repayment Amount:</strong> 41,791,830.4 EGP</li>
+                <li><strong>Collateral:</strong> Personal Car</li>
             </ul>
           </div>
-          <div class="credit-card-management">
+          <h4 class="mb-4">Pending Loans</h4>
+          <div class="loan-details">
+            <ul>
+              <li><strong>Loan Purpose:</strong> personal</li>
+              <li><strong>Loan Ammount:</strong> 10,000,000 EGP</li>
+              <li><strong>Loan Term:</strong> 60 Months</li>
+              <li><strong>Collateral:</strong> Personal Boat</li>
+            </ul>
+          </div>
+          <div class="loan-management">
             <br><br>
-            <h3>Credit Card Management</h3>
-            <button id="apply-button" onclick="toggleForm()"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Apply for Credit Card</button>
+            <h3>Loans Application</h3>
+            <button id="apply-button" onclick="toggleForm()">Apply for A Loan</button>
             <br><br>
             <form id="credit-card-form" style="display: none;" onsubmit="submitForm(event)">
-              <label for="name">Name:</label>
+              <label for="name">Loan Purpose:</label>
               <input type="text" id="name" name="name">
               <br><br>
              
-              <label for="natid">National ID:</label>
+              <label for="natid">Loan Ammount:</label>
               <input type="text" id="natid" name="natid">
               <br><br>
-              <label for="accno">Account Number (if any):</label>
+              <label for="accno">Loan Term:</label>
               <input type="text" id="accno" name="accno">
               <br><br>
-              <label for="card-type">Card Type:</label>
-              <div>
-                <input type="radio" id="visa" name="card-type" value="Visa">
-                <label for="visa">Visa</label>
-              </div>
-              <div>
-                <input type="radio" id="mastercard" name="card-type" value="Mastercard">
-                <label for="mastercard">Mastercard</label>
-              </div>
+              <label for="accno">Collateral:</label>
+              <input type="text" id="accno" name="accno">
               <br><br>
-              <button type="submit"style="background-color:orange; color: white; width: 200px; font-weight: bold; border: none; border-radius: 5px;">Submit Application</button>
+              <button type="submit" >Submit Application</button>
             </form>
           </div>
           </div>

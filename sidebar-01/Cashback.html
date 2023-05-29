@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>cashback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".//css/style.css">
+</head>
+
+<body>
+    <!--Navigation panel-->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="homeClient.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="CreditCard.html">Credit Cards</a>
+                    </li>
+
+                    <li>
+                        <a href="ManageLoans.html">Loans</a>
+
+                    </li>
+                    <li>
+                        <a href="Transactions.html">View Transactions</a>
+                    </li>
+                    <li>
+                        <a href="#">View Bills</a>
+                    </li>
+                    <li>
+                        <a href="#">Bank Transfer</a>
+                    </li>
+                    <li>
+                        <a href="#">Cash Back Points</a>
+                    </li>
+                    <li>
+                        <a href="Technicalissues.html">Report A Problem</a>
+                    </li>
+                    <li>
+                        <a href="Reminders.html">Reminders</a>
+                    </li>
+                </ul>
+
+                <div class="footer">
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with
+                        by Injy Ismail</a>
+
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="homeClient.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="AboutClient.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.html">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content  -->
+            <!-- Header -->
+            <header class="bg-light py-5">
+                <div class="container">
+                    <h1 class="text-center">Cashback Points System</h1>
+                </div>
+            </header>
+
+            <!-- About Section -->
+            <section class="py-5">
+                <div class="container">
+                    <h2>Welcome to our points system</h2>
+                    <p>
+                        Welcome to Banky, where we value your loyalty and want to reward you for choosing us as your trusted financial partner. Our cashback points system is designed to give you additional benefits and savings every time you use our banking services.
+                    </p>
+                    <p>
+                        With our cashback points system, every transaction you make with Banky earns you points. Whether it's making purchases with your debit or credit card, paying bills online, or transferring funds, you accumulate points that can be redeemed for various rewards.
+                    </p>
+                    <p>
+                        Here's how it works: For each qualifying transaction, you earn a certain number of points based on the transaction amount. These points can then be used to unlock a range of benefits, such as discounts on future transactions, cashback on specific purchases, gift cards, travel vouchers, or even exclusive access to special offers and events.
+                    </p>
+                    <p>
+                        The more you use Banky's services, the more points you accumulate, allowing you to enjoy even greater rewards. It's our way of saying thank you for choosing Banky and being a valued customer.
+                    </p>
+                    <p>
+                        To track your points and redeem them, simply log in to your Banky account and visit our dedicated rewards portal. There, you'll be able to see your current point balance, browse through the available rewards, and choose the ones that best suit your preferences and needs.
+                    </p>
+                    <p>
+                        At Banky, we believe in providing exceptional banking experiences, and our cashback points system is just one of the ways we strive to exceed your expectations. It's our commitment to enhancing your financial journey and making your relationship with us even more rewarding.
+                    </p>
+                    <p>
+                        Start earning cashback points today and unlock a world of benefits with Banky. Experience the power of rewards as you manage your finances and enjoy the perks of being a valued Banky client.
+                    </p>
+
+                    <!-- Points Section -->
+                    <section class="points-section mt-5">
+                        <button id="view-points-btn" class="btn btn-primary">View Available Points</button>
+                        <div id="points-text" class="mt-3" style="display: none;">
+                            <p>You currently have 45000 points!</p>
+                            <a href="availableRewards.html" class="btn btn-success">Redeem Points</a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src=".//js/jquery.min.js"></script>
+    <script src=".//js/popper.js"></script>
+    <script src=".//js/bootstrap.min.js"></script>
+    <script src=".//js/main.js"></script>
+    <script>
+        // JavaScript code to show/hide the points text
+        document.getElementById("view-points-btn").addEventListener("click", function () {
+            var pointsText = document.getElementById("points-text");
+            pointsText.style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

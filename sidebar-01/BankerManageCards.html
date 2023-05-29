@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Manage Cards</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href=".//css/style.css">
+</head>
+
+<body>
+
+    <!--Navigation panel-->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="homeBanker.html">Home</a>
+                      </li>
+
+                   
+                    <li>
+                        <a href="ClientBankerView.html">Manage Client(s)</a>
+                    </li>
+
+                    <li>
+                        <a href="ReportBanker.html">Reports</a>
+                    </li>
+                    <li>
+                        <a href="bankersettings.html">Settings</a>
+                      </li>
+
+                </ul>
+
+                <div class="footer">
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with
+                        by Injy Ismail</a>
+                        
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Header  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="homeBanker.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="AboutBanker.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.html">Signout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <head>
+                <meta charset="utf-8">
+                <title>Loan Management</title>
+                <style>
+                    table {
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+                    
+                    th, td {
+                      border: 1px solid black;
+                      padding: 8px;
+                      text-align: left;
+                    }
+                    
+                    th {
+                      background-color: #f2f2f2;
+                    }
+                  </style>
+              </head>
+              <body>
+                <h1>Client Name: Khaled Magdy</h1>
+                
+                <table>
+                  <tr>
+                    <th>Entry</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Cardholder Name: Khaled Magdy</p>
+                      <p>Card Type: MasterCard</p>
+                      <p>Credit Limit: 500,000 EGP</p>
+                    </td>
+                    <td>
+                        <button onclick="accepttLoan(this)" style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Accept</button>
+                        <button onclick="rejectLoan(this)" style="background-color: orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Reject</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Cardholder Name: Khaled Magdy</p>
+                      <p>Card Type: Visa</p>
+                      <p>Credit Limit: 1,000,000 EGP</p>
+
+                    </td>
+                    <td>
+                        <button onclick="accepttLoan(this)" style="background-color:orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Accept</button>
+                        <button onclick="rejectLoan(this)" style="background-color: orange; color: white; width: 150px; font-weight: bold; border: none; border-radius: 5px;">Reject</button>
+                    </td>
+                  </tr>
+                </table>
+                
+                <script>
+                  function acceptLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Card accepted");
+                  }
+                  
+                  function rejectLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Card rejected");
+                  }
+                </script>
+              </body>
+            </html>

@@ -10,12 +10,18 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href=".//css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".//css/style.css">
         <style>
               .form-container {
         display: none;
       }
-
+      button[type="submit"] {
+  background-color: orange;
+  color: white;
+}
       .form-container.active {
         display: block;
       }
@@ -62,7 +68,7 @@
 		}
 
 		.button {
-			background-color: #4CAF50;
+			background-color: orange;
 			color: white;
 			border: none;
 			border-radius: 5px;
@@ -86,7 +92,7 @@
 			border-radius: 5px;
 		}
         #international-transfer-button {
-  background-color: #4CAF50;
+  background-color: orange;
   color: white;
   border: none;
   border-radius: 5px;
@@ -109,14 +115,14 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
-	           
-	          </li>
+              <a href="homeClient.html">Home</a>
+          </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
+           
 	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
+              <a href="ManageLoans.html">Manage Loans</a>
               
 	          </li>
 	          <li>
@@ -126,13 +132,16 @@
               <a href="BILLS.html">View Bills</a>
 	          </li>
             <li>
-              <a href="#">Bank Transfer</a>
+              <a href="Transfer.html">Bank Transfer</a>
 	          </li>
             <li>
-              <a href="Pay.html">Pay Bills</a>
+              <a href="Cashback.html">Cash Back Points</a>
 	          </li>
             <li>
-              <a href="#">Cash Back Points</a>
+              <a href="Technicalissues.html">Report A Problem</a>
+	          </li>
+            <li>
+              <a href="Reminders.html">Reminders</a>
 	          </li>
 	        </ul>
 
@@ -161,17 +170,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Signout</a>
-                </li>
+                  <a class="homeClient.html" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="About.html" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="ContactUs.html" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="Login.html" href="#">Signout</a>
+              </li>
               </ul>
             </div>
           </div>
@@ -181,7 +190,7 @@
         <div class="button-container">
             <div class="button-row">
               <div class="button-and-form-container">
-                <button class="button" id="international-transfer-button">INTERNATIONAL TRANSFER</button>
+                <button class="button" id="international-transfer-button"><i class="fa-solid fa-globe fa-flip fa-xl"></i>    INTERNATIONAL TRANSFER</button>
                 <div class="form-container" id="international-transfer-form">
                   <form id="transfer-form">
                     <label for="Country">Country:</label>
@@ -192,8 +201,7 @@
                     <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
                     <label for="Currency">Currency:</label>
                     <textarea id="Currency" name="Currency" required></textarea><br><br>
-                    <input type="submit" value="Submit">
-                  </form>
+                    <input type="submit" value="Submit" style="background-color: orange; color: white;">                  </form>
                 </div>
               </div>
               <script>
@@ -227,7 +235,7 @@
               </script>
           </div>  
           <div>
-            <button class="button" id="internal-transfer-button">INTERNAL TRANSFER</button>
+            <button class="button" id="internal-transfer-button"><i class="fa-regular fa-city fa-lg"></i>  INTERNAL TRANSFER</button>
     
             <div class="form-container" id="internal-transfer-form" style="display:none">
                 <form>
@@ -237,8 +245,7 @@
                     <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
                     <label for="notes">Bank Name:</label>
                     <textarea id="notes" name="notes" required></textarea><br><br>
-                    <input type="submit" value="Submit">
-                </form>
+                    <input type="submit" value="Submit" style="background-color: orange; color: white;">                </form>
             </div>
     
             <script>
@@ -265,7 +272,7 @@
         </div>
             
         <div>
-            <button class="button" id="domestic-transfer-button">DOMESTIC TRANSFER</button>
+            <button class="button" id="domestic-transfer-button"><i class="fa-solid fa-money-bill-transfer fa-lg"></i>  DOMESTIC TRANSFER</button>
     
             <div class="form-container" id="domestic-transfer-form" style="display:none">
                 <form>
@@ -275,8 +282,7 @@
                     <label for="transfer-amount">Transfer Amount:</label>
                     <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
                    
-                    <input type="submit" value="Submit">
-                </form</div>
+                    <input type="submit" value="Submit" style="background-color:orange; color: white;">                </form</div>
 
                 <script>
                     const domesticTransferButton = document.getElementById("domestic-transfer-button");
