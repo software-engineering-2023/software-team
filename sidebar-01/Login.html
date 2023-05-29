@@ -12,16 +12,75 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href=".//css/style.css">
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .card {
+            background-color: #222;
+            color: #fff;
+        }
+
+        body.dark-mode .form-control,
+        body.dark-mode .btn-primary {
+            background-color: #444;
+            color: #fff;
+        }
+
+        body.dark-mode #login-error {
+            color: #ff5555;
+        }
+
+        body.dark-mode a {
+            color: #fff;
+        }
+
+        body.dark-mode h5.card-title {
+            color: #fff;
+        }
+    </style>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            width: 150px;
+            /* Adjust the width as needed */
+            height: auto;
+        }
+    </style>
 </head>
 
 <!-- Login Body -->
 
-<body>
+<body class="dark-mode">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="card mt-5">
+                <div class="login-container card mt-5">
                     <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="images/logo.jpg" alt="Logo" class="logo-img rounded-circle">
+                        </div>
                         <h5 class="card-title text-center">Login</h5>
                         <form onsubmit="login(event)">
                             <div class="form-group">

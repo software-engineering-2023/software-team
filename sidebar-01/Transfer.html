@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  	<title>Banky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href=".//css/style.css">
+    
+        <style>
+              .form-container {
+        display: none;
+      }
+
+      .form-container.active {
+        display: block;
+      }
+
+      .button-and-form-container {
+        text-align: center;
+      }
+
+      button, input[type="submit"] {
+        display: block;
+        margin: 10px auto;
+      }
+        
+        h7 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      form input[type="text"],
+      form textarea {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+          
+     .button-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			background-color: #f2f2f2;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.button-row {
+			display: flex;
+			align-items: center;
+		}
+
+		.button-and-form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+
+		.active {
+			display: block;
+		}
+
+		.form-container {
+			display: none;
+			background-color: #f2f2f2;
+			padding: 10px;
+			border-radius: 5px;
+		}
+        #international-transfer-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+      
+    </style>
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+	        <ul class="list-unstyled components mb-5">
+	          <li>
+	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
+	           
+	          </li>
+	          <li>
+	              <a href="CreditCard.html">Manage Credit Cards</a>
+	          </li>
+	          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
+              
+	          </li>
+	          <li>
+              <a href="Transactions.html">View Transactions</a>
+	          </li>
+	          <li>
+              <a href="BILLS.html">View Bills</a>
+	          </li>
+            <li>
+              <a href="#">Bank Transfer</a>
+	          </li>
+            <li>
+              <a href="Pay.html">Pay Bills</a>
+	          </li>
+            <li>
+              <a href="#">Cash Back Points</a>
+	          </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+          <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Signout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <h7> Money Transfers</h7> <i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
+
+        <div class="button-container">
+            <div class="button-row">
+              <div class="button-and-form-container">
+                <button class="button" id="international-transfer-button">INTERNATIONAL TRANSFER</button>
+                <div class="form-container" id="international-transfer-form">
+                  <form id="transfer-form">
+                    <label for="Country">Country:</label>
+                    <input type="text" id="Country" name="Country" required><br><br>
+                    <label for="recipient-account-number">Recipient's Account Number:</label>
+                    <input type="text" id="recipient-account-number" name="recipient-account-number" required><br><br>
+                    <label for="transfer-amount">Transfer Amount:</label>
+                    <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
+                    <label for="Currency">Currency:</label>
+                    <textarea id="Currency" name="Currency" required></textarea><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+                </div>
+              </div>
+              <script>
+                const transferButton = document.getElementById("international-transfer-button");
+                const transferFormContainer = document.getElementById("international-transfer-form");
+                const transferForm = document.getElementById("transfer-form");
+          
+                transferButton.addEventListener("click", () => {
+                  transferFormContainer.classList.toggle("active");
+                });
+          
+                transferForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent the default form submission behavior
+
+  // get the values of the form fields
+  const country = document.getElementById('Country').value;
+  const accountNumber = document.getElementById('recipient-account-number').value;
+  const amount = document.getElementById('transfer-amount').value;
+  const currency = document.getElementById('Currency').value;
+
+  // display a message to the user
+  const message = `Transfer Done Successfully`;
+  alert(message);
+
+  // clear the form fields
+  transferForm.reset();
+
+  // remove the form from the page
+  transferFormContainer.classList.remove("active");
+});
+              </script>
+          </div>  
+          <div>
+            <button class="button" id="internal-transfer-button">INTERNAL TRANSFER</button>
+    
+            <div class="form-container" id="internal-transfer-form" style="display:none">
+                <form>
+                    <label for="recipient-account-number">Recipient's Account Number:</label>
+                    <input type="text" id="recipient-account-number" name="recipient-account-number" required><br><br>
+                    <label for="transfer-amount">Transfer Amount:</label>
+                    <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
+                    <label for="notes">Bank Name:</label>
+                    <textarea id="notes" name="notes" required></textarea><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+    
+            <script>
+                const internalTransferButton = document.getElementById("internal-transfer-button");
+                const internalTransferForm = document.getElementById("internal-transfer-form");
+    
+                internalTransferButton.addEventListener("click", () => {
+                    internalTransferForm.style.display = "block";
+                });
+    
+                internalTransferForm.addEventListener("submit", (event) => {
+                    const accountNumber = document.getElementById("recipient-account-number").value;
+                    const amount = document.getElementById("transfer-amount").value;
+                    const notes = document.getElementById("notes").value;
+    
+                    const message = `Transfer Done Successfully`;
+                  alert(message);
+          
+                  // clear the form fields
+                  internalTransferForm.reset();
+                  
+                });
+            </script>
+        </div>
+            
+        <div>
+            <button class="button" id="domestic-transfer-button">DOMESTIC TRANSFER</button>
+    
+            <div class="form-container" id="domestic-transfer-form" style="display:none">
+                <form>
+                    
+                    <label for="recipient-account-number">Recipient's Account Number:</label>
+                    <input type="text" id="recipient-account-number" name="recipient-account-number" required><br><br>
+                    <label for="transfer-amount">Transfer Amount:</label>
+                    <input type="text" id="transfer-amount" name="transfer-amount" required><br><br>
+                   
+                    <input type="submit" value="Submit">
+                </form</div>
+
+                <script>
+                    const domesticTransferButton = document.getElementById("domestic-transfer-button");
+                    const domesticTransferForm = document.getElementById("domestic-transfer-form");
+            
+                    domesticTransferButton.addEventListener("click", () => {
+                        domesticTransferForm.style.display = "block";
+                    });
+            
+                    domesticTransferForm.addEventListener("submit", (event) => {
+                        const accountNumber = document.getElementById("recipient-account-number").value;
+                        const amount = document.getElementById("transfer-amount").value;
+            
+                        const message = `Transfer Done Successfully`;
+                  alert(message);
+          
+                  // clear the form fields
+                  domesticTransferForm.reset();
+                    });
+                </script>
+            </div>
+            </div>
+          </div>
