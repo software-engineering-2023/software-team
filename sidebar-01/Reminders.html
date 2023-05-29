@@ -94,6 +94,7 @@
              
                
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2>Your Reminders</h2>
           <table class="transaction-table">
             <tr>
@@ -211,6 +212,124 @@
     <button type="submit">Submit</button>
 </form>
 
+=======
+          
+    
+          <h2 class="animated-text">Your Reminders</h2>
+
+          <style>
+            .animated-text {
+              font-family: 'Roboto', sans-serif;
+              font-style: italic;
+              animation: slide-in 1.5s ease-in-out forwards;
+            }
+          
+            @keyframes slide-in {
+              from {
+                transform: translateX(-50px);
+                opacity: 0;
+              }
+              to {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+          </style>
+
+
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>Title</th>
+                  <th>Amount</th>
+                  <th>Due Date</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Credit Card Bill</td>
+                  <td>$5,000</td>
+                  <td>September 13, 2023</td>
+                  
+              </tr>
+              <tr>
+                  <td>Phone Bill</td>
+                  <td>$50</td>
+                  <td>July 15, 2023</td>
+              
+              </tr>
+              <tr>
+                <td>Loan Bill</td>
+                <td>$1,000</td>
+                <td>June 12, 2023</td>
+            
+            </tr>
+            <tr>
+              <td>Gas Bill</td>
+              <td>$60</td>
+              <td>May 30, 2023</td>
+          
+          </tr>
+          </tbody>
+      </table>
+          <hr>
+            
+          <button onclick="showForm()" class="reminder-button">Set A Reminder</button>
+
+          <i class="fa-solid fa-bell fa-bounce fa-lg reminder-icon"></i>
+          
+          <style>
+            .reminder-button {
+              font-size: 18px;
+              font-weight: bold;
+              padding: 12px 24px;
+              color: #fff;
+              background-color: #FFA500;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+            
+            .reminder-icon {
+              font-size: 24px; 
+              color: #FFA500;
+              margin-left: 8px;
+              vertical-align: middle;
+            }
+          </style>
+<hr>
+
+<form id="myForm" style="display:none;" onsubmit="submitForm(event)">
+  <label for="textbox1">Title Of Reminder:</label>
+  <input type="text" id="textbox1"required><br><br>
+  <label for="textbox2">Amount:</label>
+  <input type="text" id="textbox2"required><br><br>
+  <label for="textbox3">Due Date:</label>
+  <input type="date" id="textbox3"required><br><br>
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
+<style>
+  .submit-button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px; 
+    height: 50px; 
+    margin: 0 auto; 
+  }
+  </style>
+
+</style>
+
+>>>>>>> Sara2
 <div id="message" style="display:none;">Reminder Submitted!</div>
 
 <script>

@@ -27,7 +27,10 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
 	          </li>
+<<<<<<< HEAD
             
+=======
+>>>>>>> Sara2
 	          <li>
               <a href="Transactions.html">View Transactions</a>
 	          </li>
@@ -90,6 +93,7 @@
           </div>
         </nav>
         <div id="home">
+<<<<<<< HEAD
           <h2 class="mb-4">Report your problem</h2>
 
           <style>
@@ -114,6 +118,45 @@
           </div>
           <div class="form-option">
             <input type="radio" id="green" name="colors" value="green">
+=======
+         <h2 class="mb-4 animated-text">Report your problem</h2>
+
+<style>
+  .animated-text {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>
+          
+          <label for="colors"><u>Determine your problem:</u></label>
+          <div class="form-option">
+          <input type="radio" id="red" name="colors" value="red" required>
+          <label for="red">Credit card theft</label>
+          </div>
+          <div class="form-option">
+          <input type="radio" id="green" name="colors" value="green"required>
+          <label for="green">Credit Card Loss</label>
+          </div>
+          <div class="form-option">
+          <input type="radio" id="blue" name="colors" value="blue"required>
+          <label for="blue">Credit Card Damage</label>
+          </div>
+          <div class="form-option">
+            <input type="radio" id="green" name="colors" value="green"required>
+>>>>>>> Sara2
             <label for="green">Credit Card Damage</label>
           </div>
           <hr>
@@ -125,6 +168,7 @@
           </style>
           
           <div class="form-group">
+<<<<<<< HEAD
             <label for="mytextbox">For other problems::</label>
             <textarea id="mytextbox" name="mytextbox" rows="5" cols="50"></textarea>
           </div>
@@ -134,6 +178,24 @@
         <hr>
 
         <a href="tel:+1234567890" style="color: blue;">For technical issues Call us at (123) 456-7890</a>
+=======
+            <label for="mytextbox" style="text-decoration: underline;">For other problems:</label>
+            
+            <textarea id="mytextbox" name="mytextbox" rows="5" cols="50" required></textarea>
+          </div>
+          <hr>
+          <button type="submit" id="confirm-button" style="font-size: 14px; font-weight: bold; padding: 8px 16px; color: #fff; background-color: #FFA500; border: none; border-radius: 4px; cursor: pointer;">Confirm</button>
+
+<script>
+  document.getElementById("confirm-button").addEventListener("click", function() {
+    alert("Your problem has been reported. Thank you!");
+  });
+</script>
+        </form>
+        <hr>
+
+        <a href="tel:+1234567890" style="color: orange;">For technical issues Call us at (123) 456-7890</a>
+>>>>>>> Sara2
 
       </div>
 		</div>
@@ -143,4 +205,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> Sara2
