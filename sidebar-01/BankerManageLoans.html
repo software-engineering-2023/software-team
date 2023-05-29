@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Settings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Manage Loans</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href=".//css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href=".//css/style.css">
 </head>
 
 <body>
@@ -35,7 +35,6 @@
                     <li>
                         <a href="bankersettings.html">Settings</a>
                       </li>
-                   
 
                 </ul>
 
@@ -83,46 +82,73 @@
                     </div>
                 </div>
             </nav>
+            <head>
+                <meta charset="utf-8">
+                <title>Loan Management</title>
+                <style>
+                    table {
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+                    
+                    th, td {
+                      border: 1px solid black;
+                      padding: 8px;
+                      text-align: left;
+                    }
+                    
+                    th {
+                      background-color: #f2f2f2;
+                    }
+                  </style>
+              </head>
+              <body>
+                <h1>Client Name: Khaled Magdy</h1>
+                
+                <table>
+                  <tr>
+                    <th>Entry</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Loan purpose: personal</p>
+                      <p>Loan Ammount: 5,000,000 EGP</p>
+                      <p>Loan Term: 48 Months</p>
+                      <p>Collateral: House</p>
+                    </td>
+                    <td>
+                      <button onclick="acceptLoan(this)">Accept</button>
+                      <button onclick="rejectLoan(this)">Reject</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <p>Loan purpose: business</p>
+                        <p>Loan Ammount: 50,000,000 EGP</p>
+                        <p>Loan Term: 96 Months</p>
+                        <p>Collateral: Company</p>
+                    </td>
+                    <td>
+                      <button onclick="acceptLoan(this)">Accept</button>
+                      <button onclick="rejectLoan(this)">Reject</button>
+                    </td>
+                  </tr>
+                </table>
+                
+                <script>
+                  function acceptLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Loan accepted");
+                  }
+                  
+                  function rejectLoan(button) {
+                    var entryRow = button.parentNode.parentNode;
+                    entryRow.remove();
+                    alert("Loan rejected");
+                  }
+                </script>
+              </body>
+            </html>
 
-            <!-- Page Content  -->
-            <div id="content" class="p-4 p-md-5">
-                <!-- Content here -->
-                <div class="container">
-                    <h2>Update Settings</h2>
-                    <form id="settings-form">
-                        <div class="form-group">
-                            <label for="site-title">Site Title:</label>
-                            <input type="text" class="form-control" id="site-title" name="site-title" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="logo-image">Logo Image:</label>
-                            <input type="file" class="form-control-file" id="logo-image" name="logo-image">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="site-description">Site Description:</label>
-                            <textarea class="form-control" id="site-description" name="site-description"
-                                required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            document.getElementById("settings-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                // Perform the necessary logic to update the settings
-                alert("Settings updated successfully!");
-            });
-        </script>
-</body>
-
-</html>
