@@ -23,7 +23,9 @@
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
-            
+            <li>
+              <a href="home.html">Home</a>
+          </li>
 	          <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
@@ -94,12 +96,13 @@
         </nav>
         <div id="home">
           <h2 class="mb-4">View Transactions</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your credit card transactions:</p>
+          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your credit card(123456788) transactions:</p>
           <div class="transaction-details">
-            <table class="transaction-table">
+            <table class="table">
                 <tr>
                   <th>Transaction</th>
                   <th>Transaction ID</th>
+                  <th>Credit Card Number</th>
                   <th>Merchant Name</th>
                   <th>Date and Time</th>
                   <th>Amount</th>
@@ -108,6 +111,7 @@
                 <tr>
                   <th>1</th>
                   <td id="transaction-id">1234567890</td>
+                  <td id="credit_card_number">123456788</td>
                   <td id="merchant-name">KFC</td>
                   <td id="date-time">June 1, 2023 10:30 AM</td>
                   <td id="amount">$15.99</td>
@@ -116,6 +120,7 @@
                 <tr>
                   <th>2</th>
                   <td id="transaction-id">9876543210</td>
+                  <td id="credit_card_number">123456788</td>
                   <td id="merchant-name">Bath & Bodyworks</td>
                   <td id="date-time">June 2, 2023 2:45 PM</td>
                   <td id="amount">$80.99</td>
@@ -124,6 +129,7 @@
                 <tr>
                     <th>3</th>
                     <td id="transaction-id">1758963258</td>
+                    <td id="credit_card_number">123456788</td>
                     <td id="merchant-name">Zara</td>
                     <td id="date-time">May 30, 2023 10:30 AM</td>
                     <td id="amount">$185.99</td>
@@ -132,6 +138,7 @@
                   <tr>
                     <th>4</th>
                     <td id="transaction-id">7859632578</td>
+                    <td id="credit_card_number">123456788</td>
                     <td id="merchant-name">Circle K</td>
                     <td id="date-time">May 28 , 2023 8:45 PM</td>
                     <td id="amount">$10.99</td>
@@ -142,10 +149,11 @@
           <br><br>
           <p style="text-align: left; font-weight: bold; text-decoration: underline;">Here are your bank transactions:</p>
           <div class="transaction-details">
-            <table class="transaction-table">
+            <table class="table">
                 <tr>
                   <th>Transaction</th>
                   <th>Transaction ID</th>
+                  <th>Account Number</th>
                   <th>Type of Transaction</th>
                   <th>Type of Transfer</th>
                   <th>Currency</th>
@@ -156,9 +164,10 @@
                 <tr>
                   <th>1</th>
                   <td id="transaction-id">1234567890</td>
-                  <td id="merchant-name">Transfer</td>
-                  <td id="merchant-name">Domestic</td>
-                  <td id="merchant-name">EGP</td>
+                  <td id="account-number">58545</td>
+                  <td id="transaction-type">Transfer</td>
+                  <td id="transfer-type">Domestic</td>
+                  <td id="Currency">EGP</td>
                   <td id="date-time">June 1, 2023 10:30 AM</td>
                   <td id="amount">$15.99</td>
                   <td id="status">Approved</td>
@@ -166,9 +175,10 @@
                 <tr>
                   <th>2</th>
                   <td id="transaction-id">1578963258</td>
-                  <td id="merchant-name">Deposit</td>
-                  <td id="merchant-name">-</td>
-                  <td id="merchant-name">$</td>
+                  <td id="account-number">58545</td>
+                  <td id="transaction-type">Deposit</td>
+                  <td id="transfer-type">-</td>
+                  <td id="Currency">$</td>
                   <td id="date-time">May 28, 2023 8:15 AM</td>
                   <td id="amount">$10,000</td>
                   <td id="status">Pending</td>

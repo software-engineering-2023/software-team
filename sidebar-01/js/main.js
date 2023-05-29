@@ -43,8 +43,33 @@ function toggleForm() {
 	  form.style.display = "none";
 	}
   }function submitForm(event) {
-	event.preventDefault();
-	alert("Successfully Submitted!");
+	event.preventDefault(); // prevent the default form submission behavior
+  
+	var nameInput = document.querySelector('#name');
+	var natidInput = document.querySelector('#natid');
+	var accnoInput = document.querySelector('#accno');
+	var cardTypeInputs = document.querySelectorAll('input[name="card-type"]');
 	
-	document.getElementById("credit-card-form").reset();
+	// Check if all fields are filled
+	if (!nameInput.value || !natidInput.value || !getSelectedCardType(cardTypeInputs)) {
+	  alert("Please fill in all required fields.");
+	  return;
+	}
+  
+	// Submit the form
+	var formElement = document.querySelector('#credit-card-form');
+	formElement.submit();
+  
+	// Show success message
+	var successMessage = "Successfully submitted!";
+	alert(successMessage);
+  }
+  
+  function getSelectedCardType(cardTypeInputs) {
+	for (var i = 0; i < cardTypeInputs.length; i++) {
+	  if (cardTypeInputs[i].checked) {
+		return cardTypeInputs[i].value;
+	  }
+	}
+	return null;
   }
