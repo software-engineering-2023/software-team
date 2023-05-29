@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Bank EL Bank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href=".//css/style.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+	        <ul class="list-unstyled components mb-5">
+	         
+              <li>
+                <a href="home.html">Home</a>
+            </li>
+	          <li>
+	              <a href="CreditCard.html">Manage Credit Cards</a>
+	          </li>
+	          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
+              
+	          </li>
+	          <li>
+              <a href="Transactions.html">View Transactions</a>
+	          </li>
+	          <li>
+              <a href="#">View Bills</a>
+	          </li>
+            <li>
+              <a href="#">Bank Transfer</a>
+	          </li>
+            <li>
+              <a href="#">Cash Back Points</a>
+	          </li>
+            <li>
+              <a href="Technicalissues.html">Report A Problem</a>
+	          </li>
+              <li>
+                <a href="Reminders.html">Reminders</a>
+                </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  by Injy Ismail</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Signout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div id="home">
+             
+               
+          
+    
+          <h2 class="animated-text">Your Reminders</h2>
+
+          <style>
+            .animated-text {
+              font-family: 'Roboto', sans-serif;
+              font-style: italic;
+              animation: slide-in 1.5s ease-in-out forwards;
+            }
+          
+            @keyframes slide-in {
+              from {
+                transform: translateX(-50px);
+                opacity: 0;
+              }
+              to {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+          </style>
+
+
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>Title</th>
+                  <th>Amount</th>
+                  <th>Due Date</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Credit Card Bill</td>
+                  <td>$5,000</td>
+                  <td>September 13, 2023</td>
+                  
+              </tr>
+              <tr>
+                  <td>Phone Bill</td>
+                  <td>$50</td>
+                  <td>July 15, 2023</td>
+              
+              </tr>
+              <tr>
+                <td>Loan Bill</td>
+                <td>$1,000</td>
+                <td>June 12, 2023</td>
+            
+            </tr>
+            <tr>
+              <td>Gas Bill</td>
+              <td>$60</td>
+              <td>May 30, 2023</td>
+          
+          </tr>
+          </tbody>
+      </table>
+          <hr>
+            
+          <button onclick="showForm()" class="reminder-button">Set A Reminder</button>
+
+          <i class="fa-solid fa-bell fa-bounce fa-lg reminder-icon"></i>
+          
+          <style>
+            .reminder-button {
+              font-size: 18px;
+              font-weight: bold;
+              padding: 12px 24px;
+              color: #fff;
+              background-color: #FFA500;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+            
+            .reminder-icon {
+              font-size: 24px; 
+              color: #FFA500;
+              margin-left: 8px;
+              vertical-align: middle;
+            }
+          </style>
+<hr>
+
+<form id="myForm" style="display:none;" onsubmit="submitForm(event)">
+  <label for="textbox1">Title Of Reminder:</label>
+  <input type="text" id="textbox1"required><br><br>
+  <label for="textbox2">Amount:</label>
+  <input type="text" id="textbox2"required><br><br>
+  <label for="textbox3">Due Date:</label>
+  <input type="date" id="textbox3"required><br><br>
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
+<style>
+  .submit-button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px; 
+    height: 50px; 
+    margin: 0 auto; 
+  }
+  </style>
+
+</style>
+
+<div id="message" style="display:none;">Reminder Submitted!</div>
+
+<script>
+function showForm() {
+    var form = document.getElementById("myForm");
+    if (form.style.display === "none") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+function submitForm(event) {
+    event.preventDefault(); // prevent form submission
+    var message = document.getElementById("message");
+    message.style.display = "block";
+    console.log("Form submitted!");
+}
+</script>
+
+
+
+
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
