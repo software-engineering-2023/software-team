@@ -93,6 +93,7 @@
         <div id="home">
              
                
+<<<<<<< HEAD
           <h2>Your Reminders</h2>
           <table class="transaction-table">
             <tr>
@@ -135,6 +136,71 @@
 
 <hr>
 
+=======
+            <button onclick="showTable()">View Reminders</button>
+<hr>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+            <table id="myTable" style="display:none;">
+              <tr>
+                <th>Title Of Reminder</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+              </tr>
+              <tr>
+                <td>Credit Card Bill</td>
+                <td>10,000</td>
+                <td>August 1, 2023 10:30 AM</td>
+              </tr>
+              <tr>
+                <td>Electricity Bill</td>
+                <td>3,000</td>
+                <td>june 22, 2023 12;00 AM</td>
+              </tr>
+              <tr>
+                <td>Loan Bill</td>
+                <td>30,000</td>
+                <td>October 1, 2023 12;00 AM</td>
+              </tr>
+            </table>
+            
+            <script>
+            function showTable() {
+              var table = document.getElementById("myTable");
+              if (table.style.display === "none") {
+                table.style.display = "table";
+              } else {
+                table.style.display = "none";
+              }
+            }
+            </script>
+
+            
+<button onclick="showForm()">Set A Reminder</button>
+<i class="fa-solid fa-bell" style="font-size: 22px;"></i>
+<hr>
+
+
+>>>>>>> Shouny/lama
 <form id="myForm" style="display:none;" onsubmit="submitForm(event)">
     <label for="textbox1">Title Of Reminder:</label>
     <input type="text" id="textbox1"><br><br>
