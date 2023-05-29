@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Banky</title>
+  	<title>Bank EL Bank</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,9 +18,8 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="home.html" data-toggle="collapse" aria-expanded="false" >Home</a>
-	           
-	          </li>
+              <a href="home.html">Home</a>
+          </li>
 	          <li>
 	              <a href="CreditCard.html">Manage Credit Cards</a>
 	          </li>
@@ -28,22 +27,25 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Manage Loans</a>
               
 	          </li>
+            
 	          <li>
               <a href="Transactions.html">View Transactions</a>
 	          </li>
 	          <li>
-              <a href="BILLS.html">View Bills</a>
+              <a href="#">View Bills</a>
 	          </li>
             <li>
-              <a href="Transfer.html">Bank Transfer</a>
+              <a href="#">Bank Transfer</a>
 	          </li>
-              <li>
-                <a href="Pay.html">Pay Bills</a>
-                </li>
             <li>
               <a href="#">Cash Back Points</a>
 	          </li>
-              
+            <li>
+              <a href="Technicalissues.html">Report A Problem</a>
+	          </li>
+            <li>
+              <a href="Reminders.html">Reminders</a>
+	          </li>
 	        </ul>
 
 	        <div class="footer">
@@ -56,8 +58,8 @@
     	</nav>
 
         <!-- Page Content  -->
+        
       <div id="content" class="p-4 p-md-5">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
 
@@ -88,74 +90,52 @@
           </div>
         </nav>
         <div id="home">
-          <h2 class="mb-4">View Bills</h2>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">UTILITY BILLS: </p>
-          <div class="transaction-details">
-            <table class="transaction-table">
-                <tr>
-                  <th>Bill</th>
-                  <th>Due Date</th>
-                  <th>Amount</th>
-                
-                </tr>
-                <tr>
-                  
-                  
-                  <td id="Bill">Electricity</td>
-                  <td id="Due Date">August 8, 2023 </td>
-                  <td id="amount">$100</td>
-                  
-                </tr>
-                <tr>
-                  
-                    <td id="Bill">LandLine</td>
-                    <td id="Due Date">September 13, 2023 </td>
-                    <td id="amount">$50</td>
-                </tr>
-                <tr>
-                    <td id="Bill">Water</td>
-                  <td id="Due Date">June 12, 2023 </td>
-                  <td id="amount">$200</td>d</td>
-                  </tr>
-                  <tr>
-                    <td id="Bill">Gas</td>
-                  <td id="Due Datee">May 30, 2023 </td>
-                  <td id="amount">$130</td>
-                  </tr>
-              </table>
-          </div>
-          <br><br>
-          <p style="text-align: left; font-weight: bold; text-decoration: underline;">Credit Card Bills:</p>
-          <div class="transaction-details">
-            <table class="transaction-table">
-                <tr>
-                  <th>Card Number</th>
-                  <th>Outstanding Balance</th>
-                  <th>Due Date</th>
-                  <th>Minimum Amount Due</th>
-                  
-                </tr>
-                <tr>
-                 
-                  <td id="Card Number">1234 5678 9012 3456</td>
-                  <td id="Outstanding Balance">$20000</td>
-                  <td id="Due Date">June 30,2023</td>
-                  <td id="Minimum Amount due">$10000</td>
-                </tr>
-                <tr>
-                 
-                 
-                    <td id="Card Number">7854 7485 9012 1598</td>
-                    <td id="Outstanding Balance">$50000</td>
-                    <td id="Due Date">July 12,2023</td>
-                    <td id="Minimum Amount due">$25000</td>
-                </tr>
-               
-              </table>
-          </div>
+          <h2 class="mb-4">Report your problem</h2>
+
+          <style>
+            .form-option {
+              display: block;
+              margin-bottom: 10px;
+            }
+          </style>
           
+          <label for="colors"><u>Determine your problem:</u></label>
+          <div class="form-option">
+          <input type="radio" id="red" name="colors" value="red">
+          <label for="red">Credit card theft</label>
           </div>
-      
+          <div class="form-option">
+          <input type="radio" id="green" name="colors" value="green">
+          <label for="green">Credit Card Loss</label>
+          </div>
+          <div class="form-option">
+          <input type="radio" id="blue" name="colors" value="blue">
+          <label for="blue">Credit Card Damage</label>
+          </div>
+          <div class="form-option">
+            <input type="radio" id="green" name="colors" value="green">
+            <label for="green">Credit Card Damage</label>
+          </div>
+          <hr>
+          <style>
+            .form-group {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+          
+          <div class="form-group">
+            <label for="mytextbox">For other problems::</label>
+            <textarea id="mytextbox" name="mytextbox" rows="5" cols="50"></textarea>
+          </div>
+          <hr>
+          <button type="submit">Confirm</button>
+        </form>
+        <hr>
+
+        <a href="tel:+1234567890" style="color: blue;">For technical issues Call us at (123) 456-7890</a>
+
+      </div>
 		</div>
 
     <script src="js/jquery.min.js"></script>
